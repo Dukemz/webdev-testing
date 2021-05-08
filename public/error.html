@@ -5,6 +5,7 @@
     <title>Error - NovoBot</title>
       <script>
         // Hello from Dukemz :)
+        // display: block; margin-left: auto; margin-right: auto;
         function getError() {
           const params = new URLSearchParams(window.location.search);
           const errCode = params.get('err');
@@ -15,7 +16,7 @@
         }
       </script>
   </head>
-  <body onload='getError()'>
-    <img id='errorimage' src='https://google.com/images/errors/robot.png'/>
+  <body onload='getError()' style='background-color:black'>
+    <img style='display: block; margin-left: auto; margin-right: auto; width: auto; height: 97vh;' id='errorimage'/>
   </body>
 </html>
