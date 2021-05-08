@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!-- The site's error page. Dunno what you were trying to do that got you here. -->
+<html>
+  <head>
+    <title>Error - NovoBot</title>
+      <script>
+        // Hello from Dukemz :)
+        function getError() {
+          const params = new URLSearchParams(window.location.search);
+          const errCode = params.get('err');
+          if(errCode) {
+            document.getElementById("errorimage").src = `https://http.cat/${errCode}.jpg`;
+            document.title = `Error ${errCode} - NovoBot`;
+          }
+        }
+      </script>
+  </head>
+  <body onload='getError()'>
+    <img id='errorimage' src='https://google.com/images/errors/robot.png'/>
+  </body>
+</html>
